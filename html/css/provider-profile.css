@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #a2492e;
+  --accent-color: #f4ede4;
+  --light: #f9f9f9;
+  --dark: #222;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: var(--dark);
+}
+
+.profile-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-details h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 1rem;
+  color: #777;
+}
+
+.rating {
+  font-size: 1.2rem;
+  color: gold;
+  margin: 10px 0;
+}
+
+.category-tag {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hire-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hire-btn:hover {
+  background-color: #8a3e27;
+}
+
+.profile-bio, .profile-services, .profile-reviews {
+  margin-bottom: 40px;
+}
+
+.profile-bio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.profile-services ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.profile-services li {
+  margin-bottom: 10px;
+}
+
+.review {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.review span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}

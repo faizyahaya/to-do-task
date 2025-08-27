@@ -1,0 +1,158 @@
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/about-bg.png') center/cover no-repeat;
+  padding: 120px 8% 80px;
+  text-align: center;
+  color: #fff;
+  border-radius: 9px;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-section {
+  padding: 60px 8%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  color: #444;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.7;
+}
+
+.how-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.how-list li {
+  font-size: 1rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.how-list i {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.why-card {
+  background-color: var(--accent-color);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.why-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.founder-message p {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+}
+
+.founder-signature {
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.quote-box {
+  background-color: var(--accent-color);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  font-style: italic;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-box .quote-icon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  opacity: 0.15;
+}
+
+.quote-box p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.founder-signature {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  color: var(--primary-color);
+}
+
+@media (max-width: 576px) {
+  .quote-box {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .quote-box .quote-icon {
+    font-size: 2rem;
+    top: -5px;
+    left: -5px;
+  }
+}

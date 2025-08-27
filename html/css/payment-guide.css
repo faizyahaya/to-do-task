@@ -1,0 +1,68 @@
+:root {
+  --primary-color: #a2492e;
+  --accent-color: #f4ede4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.hero-section {
+  background-color: #f1fdf6;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-section h1 {
+  color: #118b53;
+}
+
+.payment-details h2 {
+  color: #222;
+  margin-top: 2rem;
+}
+
+.cta {
+  background-color: white!important;
+}
+
+ul {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.note-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #fff6d5;
+  border-left: 5px solid #e0b000;
+  font-size: 0.95rem;
+}
+
+.hero-section {
+  background-color: var(--accent-color); /* #f4ede4 */
+}
+
+.hero-section h1 {
+  color: var(--primary-color); /* #a2492e */
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 2rem;
+}

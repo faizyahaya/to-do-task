@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f4ede4;
+  color: #333;
+}
+
+.support-hero {
+  background-color: #a2492e;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.support-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.support-contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.support-contact-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.live-chat-placeholder .chat-box {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  margin-top: 10px;
+  background-color: #fff;
+  text-align: center;
+  color: #999;
+}
+
+.support-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.support-form input,
+.support-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.support-form button {
+  background-color: #a2492e;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.support-form button:hover {
+  background-color: #873c23;
+}
+
+.help-topics {
+  margin-top: 40px;
+}
+
+.topic-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.topic-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.topic-item i {
+  font-size: 30px;
+  color: #a2492e;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Provider Profile | TaskLink</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .profile-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .profile-header {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .profile-header img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--primary-color, #a2492e);
+    }
+
+    .profile-details h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .profile-details p {
+      margin: 0.3rem 0;
+    }
+
+    .rating {
+      color: gold;
+    }
+
+    .action-btn {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background-color: var(--primary-color, #a2492e);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Reuse your site header here -->
+  </header>
+
+  <main>
+    <section class="profile-container">
+      <div class="profile-header">
+        <img id="provider-image" src="" alt="Provider Photo">
+        <div class="profile-details">
+          <h2 id="provider-name"></h2>
+          <p><strong>Location:</strong> <span id="provider-location"></span></p>
+          <p><strong>Rating:</strong> <span id="provider-rating" class="rating"></span></p>
+          <p id="provider-bio"></p>
+          <a href="post-task.html" class="action-btn">Send a Task Request</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const data = localStorage.getItem("selectedProvider");
+    if (!data) {
+      document.body.innerHTML = "<p style='text-align:center;margin-top:50px;'>No provider selected. <a href='index.html'>Go back</a></p>";
+    } else {
+      const provider = JSON.parse(data);
+
+      document.getElementById("provider-image").src = provider.image || "images/default.jpg";
+      document.getElementById("provider-name").textContent = provider.name;
+      document.getElementById("provider-location").textContent = provider.location;
+      document.getElementById("provider-rating").textContent = "★".repeat(provider.rating);
+      document.getElementById("provider-bio").textContent = provider.bio;
+    }
+  </script>
+</body>
+</html>

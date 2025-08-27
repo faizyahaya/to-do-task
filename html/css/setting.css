@@ -1,0 +1,257 @@
+:root {
+  --primary: #a2492e;
+  --light-bg: #f8f8f8;
+  --text-dark: #1c1c1c;
+  --text-light: #666;
+  --border: #e0e0e0;
+  --icon-color: #444;
+  --toggle-on: #a2492e;
+  --toggle-off: #ccc;
+}
+
+body {
+  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 1rem;
+}
+
+.settings-page {
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+
+.settings-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Accordion Sections */
+.accordion-section {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.accordion-toggle {
+  width: 100%;
+  background: #fff;
+  border: none;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  font-size: 0.95rem;
+  background: var(--light-bg);
+}
+
+.accordion-content label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.accordion-content input[type="text"],
+.accordion-content input[type="email"],
+.accordion-content input[type="tel"],
+.accordion-content input[type="password"],
+.accordion-content select {
+  padding: 0.6rem;
+  width: 60%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.accordion-content button {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+/* Icons */
+.accordion-toggle::before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--icon-color);
+}
+
+/* Dynamic Icon per section using nth-child */
+.accordion-section:nth-child(2) .accordion-toggle::before { content: '\f013'; }
+.accordion-section:nth-child(3) .accordion-toggle::before { content: '\f023'; }
+.accordion-section:nth-child(4) .accordion-toggle::before { content: '\f0f3'; }
+.accordion-section:nth-child(5) .accordion-toggle::before { content: '\f21b'; }
+.accordion-section:nth-child(6) .accordion-toggle::before { content: '\f09d'; }
+.accordion-section:nth-child(7) .accordion-toggle::before { content: '\f059'; }
+.accordion-section:nth-child(8) .accordion-toggle::before { content: '\f0ae'; }
+.accordion-section:nth-child(9) .accordion-toggle::before { content: '\f095'; }
+/* changing the color of the icon*/
+.accordion-section:nth-child(10) .accordion-toggle::before {
+  content: '\f1e2';
+  color: #b00020;
+ }
+
+/* Toggle Switch */
+input[type="checkbox"] {
+  appearance: none;
+  width: 42px;
+  height: 22px;
+  background-color: var(--toggle-off);
+  border-radius: 22px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 2px;
+  top: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--toggle-on);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+/* Danger Zone */
+.danger-zone .accordion-toggle {
+  color: #b00020;
+}
+
+.danger-zone .accordion-content button {
+  color: #b00020;
+  border-color: #b00020;
+}
+
+
+/* Add this to your settings.css or main style file */
+
+/* === DESKTOP VIEW === */
+@media (min-width: 768px) {
+  .settings-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px 60px;
+  }
+
+  .settings-sidebar {
+    width: 250px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    background-color: #f9f5f1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .settings-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .settings-sidebar li {
+    margin-bottom: 18px;
+  }
+
+  .settings-sidebar a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #a2492e;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .settings-sidebar a:hover {
+    background-color: #f4ede4;
+  }
+
+  .settings-content {
+    flex: 1;
+  }
+
+  /* Override accordion behavior on desktop */
+  .accordion-section .accordion-content {
+    display: block !important;
+  }
+
+  .accordion-section .accordion-toggle {
+    display: none;
+  }
+
+  .accordion-section {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 40px;
+  }
+
+  .accordion-section h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #222;
+  }
+
+  .accordion-content .setting-item {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+  }
+
+  .setting-item span {
+    font-size: 16px;
+    color: #555;
+  }
+}
+
+/* === MOBILE FIRST (default) === */
+.settings-sidebar {
+  display: none; /* Hide by default (mobile) */
+}
+
+/* === DESKTOP VIEW === */
+@media (min-width: 768px) {
+  .settings-sidebar {
+    display: block;
+  }
+}

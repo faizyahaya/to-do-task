@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Setup | To-Do Task</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/profile-setup.css">
+</head>
+<body>
+
+  <main class="setup-wrapper">
+    <section class="form-section">
+      <div class="container">
+        <h1>Complete Your Provider Profile</h1>
+        <form id="providerForm">
+
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+
+          <label for="location">Your Location</label>
+          <input type="text" id="location" name="location" placeholder="e.g. Lagos, Abuja" required>
+
+          <label for="category">Service Category</label>
+          <select id="category" name="category" required>
+            <option value="">-- Select --</option>
+            <option value="Painting">Painting</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Carpentry">Carpentry</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Generator Repair">Generator Repair</option>
+            <option value="House Cleaning">House Cleaning</option>
+          </select>
+
+          <label for="experience">Years of Experience</label>
+          <input type="number" id="experience" name="experience" min="0" max="50" required>
+
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell customers about your skills and experience..." required></textarea>
+
+          <label for="services">Services You Offer</label>
+          <textarea id="services" name="services" rows="3" placeholder="e.g. Bathroom Fixes, AC Installation, Roof Repairs" required></textarea>
+
+          <label for="photo">Upload Your Photo</label>
+          <input type="file" id="photo" name="photo" accept="image/*">
+
+          <button type="submit" class="submit-btn">Save Profile</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html?category=house%20cleaning">House Cleaning</a></li>
+          <li><a href="category.html?category=generator%20repair">Generator Repair</a></li>
+          <li><a href="category.html?category=mechanic">Mechanic</a></li>
+          <li><a href="category.html?category=plumbing">Plumbing</a></li>
+          <li><a href="category.html?category=carpentry">Carpentry</a></li>
+          <li><a href="category.html?category=electrical">Electrical</a></li>
+          <li><a href="category.html?category=painting">Painting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>For Clients</h4>
+        <ul>
+          <li><a href="howitworks.html">How It Works</a></li>
+          <li><a href="safety.html">Safety & Trust</a></li>
+          <li><a href="post-task.html">Post a Task</a></li>
+          <li><a href="contact-support.html">Customer Support</a></li>
+          <li><a href="service-guide.html">Service Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>For Providers</h4>
+        <ul>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="profile-setup.html">Profile Setup</a></li>
+          <li><a href="payment-guide.html">Payment Guide</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="aboutus.html">About To-Do Task</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <img src="logo-white.png" alt="To-Do Task Logo" style="height: 55px;" />
+      <p>&copy; 2025 To-Do Task. Built proudly in 🇳🇬 Nigeria.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("providerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Profile saved! (Form submission functionality will be added later.)");
+    });
+  </script>
+
+</body>
+</html>

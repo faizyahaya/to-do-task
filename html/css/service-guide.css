@@ -1,0 +1,50 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4ede4;
+  color: #333;
+}
+
+.guide-header {
+  background-color: #a2492e;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.guide-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.guide-steps {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.step {
+  background-color: #fff;
+  border-left: 5px solid #a2492e;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.step h2 {
+  margin-top: 0;
+  color: #a2492e;
+}
+
+.guide-note {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.guide-note a {
+  color: #a2492e;
+  text-decoration: underline;
+}

@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #a2492e;
+  --accent-color: #f4ede4;
+  --light-gray: #f5f5f5;
+  --dark: #222;
+}
+:root {
+  --primary-color: #a2492e;
+  --accent-color: #f4ede4;
+  --text-dark: #222;
+  --text-light: #666;
+  --bg-light: #f9f9f9;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 35px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #8a3e27;
+}
+
+.divider {
+  margin: 20px 0;
+  color: #999;
+}
+
+.social-login button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.google-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.password-rules {
+  text-align: left;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.password-rules li.valid {
+  color: green;
+}
+
+.terms {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 25px;
+}
+
+.terms a {
+  color: #1dbf73;
+  text-decoration: none;
+}
+
+.password-rules li.valid {
+  color: green;
+  font-weight: 600;
+}
+
+@media (max-width: 420px) {
+  .form-box {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .terms {
+    font-size: 0.7rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+.payment-details ul {
+  margin-bottom: 1.5rem;
+}
+
+.password-rule {
+  color: gray;
+}
+
+.password-rule.valid {
+  color: green;
+}
+
+.password-rule.invalid {
+  color: red;
+}
+
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 47%;
+  transform: translateY(-80%);
+  cursor: pointer;
+  color: #888;
+}
+
+.signup-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #ccc;
+}

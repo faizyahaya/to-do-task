@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-header .back-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-user-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.chat-user-info .status {
+  font-size: 12px;
+  color: green;
+}
+
+.chat-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Messages */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.message.sent {
+  background: #a2492e;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+}
+
+.message.received {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 0;
+}
+
+.message .time {
+  display: block;
+  font-size: 10px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin: 0 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #a2492e;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+
+  .chat-list {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    background: #fff;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .chat-window {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
+.message .status {
+  font-size: 12px;
+  color: #999;
+  margin-left: 6px;
+}
+.message.sent .status.read {
+  color: #2196f3; /* blue for read */
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 3px;
+  padding: 5px 10px;
+}
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background: #bbb;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}

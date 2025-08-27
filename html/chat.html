@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat | To-Do Task</title>
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Chat Header -->
+  <div class="chat-header">
+    <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+    <img src="images/user1.jpg" alt="User" class="chat-avatar">
+    <div class="chat-user-info">
+      <h3>Amarachi</h3>
+      <span class="status">Online</span>
+    </div>
+    <div class="chat-actions">
+      <i class="fas fa-phone"></i>
+      <i class="fas fa-video"></i>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+  </div>
+
+  <!-- Chat Messages -->
+  <div class="chat-body">
+    <div class="message received">
+      <p>Hey! Are you available for this task?</p>
+       <span class="status">✓✓</span>
+      <span class="time">10:45 AM</span>
+    </div>
+
+    <div class="message sent">
+      <p>Yes, I’m free this afternoon 😃</p>
+       <span class="status">✓✓</span>
+      <span class="time">10:46 AM</span>
+    </div>
+
+    <div class="message received">
+      <p>Perfect, let’s connect later!</p>
+       <span class="status">✓✓</span>
+      <span class="time">10:47 AM</span>
+    </div>
+  </div>
+  <div class="typing-indicator">
+  <span></span><span></span><span></span>
+</div>
+
+  <!-- Chat Input -->
+  <div class="chat-footer">
+    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+    <input type="text" placeholder="Type a message...">
+    <button class="icon-btn"><i class="fas fa-paper-plane"></i></button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+.trust-hero {
+  background-color: var(--light-gray);
+  text-align: center;
+  padding: 60px 8%;
+}
+
+.trust-hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.trust-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.safety-points {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.client-provider-safety {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 30px;
+  background-color: #fff;
+}
+
+.safety-box {
+  flex: 1 1 45%;
+  background-color: var(--accent-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.safety-box h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.safety-box ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.safety-box li {
+  margin-bottom: 10px;
+}

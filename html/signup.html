@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | To-Do Task</title>
+  <link rel="stylesheet" href="css\signup.css" />
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="form-box">
+      <img src="logo-brown.png" alt="To-Do Task Logo" class="logo" />
+      <h2>Join To-Do Task</h2>
+
+      <form id="signupForm">
+        <label for="name" class="sr-only">Full Name</label>
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <span class="error-msg" id="email-error"></span>
+
+        <div style="position: relative;">
+    <input type="password" id="password" placeholder="Password" required />
+    <i class="fa fa-eye toggle-password"></i>
+  </div>
+
+        <!-- Password rules list (unchanged) -->
+        <ul class="password-rules">
+          <li id="length">At least 8 characters</li>
+          <li id="uppercase">At least 1 uppercase letter</li>
+          <li id="lowercase">At least 1 lowercase letter</li>
+          <li id="number">At least 1 number</li>
+        </ul>
+
+        <button type="submit" class="signup-btn" id="signupBtn" disabled>Create Account</button>
+
+
+      </form>
+
+
+      <div class="divider">or</div>
+
+      <div class="social-login">
+        <button class="google-btn"><i class="fab fa-google"></i> Continue with Google</button>
+        <button class="facebook-btn"><i class="fab fa-facebook"></i> Continue with Facebook</button>
+      </div>
+
+      <p class="terms">
+        By joining, you agree to the <a href="#">to-do task Terms of Service</a> and to occasionally receive emails from us.<br/>
+        Please read our <a href="#">Privacy Policy</a> to learn how we use your personal data.
+      </p>
+    </div>
+  </div>
+
+  <script src="javascript\signup.js"></script>
+</body>
+</html>

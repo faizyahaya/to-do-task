@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | To-Do Task</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+
+    <!-- Mobile menu icon -->
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">To-Do Task</h2>
+      <nav>
+        <ul>
+          <li class="nav-link active"><a href="dashboard-provider.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+
+          <li class="nav-link dropdown">
+            <a href="#" class="dropdown-toggle"><i class="fas fa-tasks"></i> Posted Tasks <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="my-task.html">My Task</a></li>
+              <li><a href="post-task.html">Post a Task</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-link"><a href="inbox.html"><i class="fas fa-comments"></i> Messages</a></li>
+
+          <li class="nav-link dropdown">
+            <a href="#" class="dropdown-toggle"><i class="fas fa-user"></i> Profile <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="edit-profile.html">Edit Profile</a></li>
+              <li><a href="setting.html">Settings</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-link"><a href="notification.html"><i class="fas fa-bell"></i> Notifications</a></li>
+          <li class="nav-link"><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+
+      <div class="role-switcher">
+        <button id="switchRole">
+          <i class="fas fa-exchange-alt"></i>Switch to Client
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Content -->
+    <main class="main-content">
+
+
+      <div class="top-bar">
+        <h1>Dashboard</h1>
+        <span class="welcome-text"><i class="fas fa-user-circle"></i> Welcome Stella!</span>
+      </div>
+
+      <!-- Inside <main class="main-content"> ... -->
+
+      <section class="dashboard-content">
+        <div class="dashboard-grid">
+
+          <!-- Welcome Header -->
+          <div class="card provider-welcome">
+            <h2><i class="fas fa-user-tie"></i> Welcome, Stella (Provider)!</h2>
+            <p>Ready to take on new tasks and grow your profile? Let's get started!</p>
+          </div>
+
+          <!-- Profile Completion Prompt -->
+          <div class="card profile-completion">
+            <h2><i class="fas fa-tasks"></i> Complete Your Profile</h2>
+            <p>Your profile is 60% complete. Add services, location, and certifications to boost visibility.</p>
+            <a href="profile-setup.html" class="btn"><i class="fas fa-edit"></i> Complete Profile</a>
+          </div>
+
+          <!-- Available Tasks Listing -->
+          <div class="card available-tasks">
+            <h2><i class="fas fa-briefcase"></i> Available Tasks</h2>
+            <ul class="task-listing">
+              <li>
+                <strong>Fix leaking pipe</strong> - Ikeja
+                <span class="badge urgent">Urgent</span>
+              </li>
+              <li>
+                <strong>Home Cleaning</strong> - Lekki
+                <span class="badge new">New</span>
+              </li>
+              <li>
+                <strong>Generator Maintenance</strong> - Surulere
+              </li>
+            </ul>
+            <a href="#" class="btn"><i class="fas fa-eye"></i> View All Tasks</a>
+          </div>
+
+          <!-- Earnings Summary -->
+          <div class="card earnings-summary">
+            <h2><i class="fas fa-wallet"></i> Earnings Summary</h2>
+            <div class="stats">
+              <div><strong>₦120,000</strong><span>Total Earnings</span></div>
+              <div><strong>₦30,000</strong><span>Available Balance</span></div>
+              <div><strong>₦10,000</strong><span>Pending Clearance</span></div>
+            </div>
+          </div>
+
+          <!-- Job Stats -->
+          <div class="card job-stats">
+            <h2><i class="fas fa-chart-line"></i> Job Stats</h2>
+            <div class="stats">
+              <div><strong>28</strong><span>Jobs Completed</span></div>
+              <div><strong>4.8</strong><span>Avg Rating</span></div>
+              <div><strong>15</strong><span>Reviews</span></div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card quick-actions">
+            <h2><i class="fas fa-bolt-lightning"></i> Quick Actions</h2>
+            <div class="actions-grid">
+              <a href="tasks.html" class="action-box">
+                <i class="fas fa-clipboard-list"></i>
+                <span>View Tasks</span>
+              </a>
+              <a href="withdraw.html" class="action-box">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Withdraw Funds</span>
+              </a>
+              <a href="support.html" class="action-box">
+                <i class="fas fa-headset"></i>
+                <span>Support</span>
+              </a>
+              <a href="edit-profile.html" class="action-box">
+                <i class="fas fa-user-cog"></i>
+                <span>Edit Profile</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="card notifications">
+            <h2><i class="fas fa-bell"></i> Notifications</h2>
+            <ul>
+              <li><i class="fas fa-info-circle"></i> New message from a client</li>
+              <li><i class="fas fa-check-circle"></i> Task "AC Repair" has been marked complete</li>
+              <li><i class="fas fa-star"></i> You received a 5-star rating</li>
+            </ul>
+          </div>
+
+          <!-- Upcoming Appointments -->
+          <div class="card upcoming-appointments">
+            <h2><i class="fas fa-calendar-alt"></i> Upcoming Appointments</h2>
+            <ul>
+              <li><strong>Electrical Fix</strong> - July 24, 10:00 AM</li>
+              <li><strong>Tailoring Pickup</strong> - July 25, 2:00 PM</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+  </div>
+
+  <script src="javascript/dashboard.js"></script>
+  <script src="javascript/javascript.js" charset="utf-8"></script>
+  <div class="overlay"></div>
+</body>
+</html>

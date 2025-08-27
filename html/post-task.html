@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post a Task | To-Do Task</title>
+  <link rel="stylesheet" href="css/post-task.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <main class="task-wrapper">
+    <h1>Post a Task</h1>
+    <p class="subtitle">Tell us what you need done and get connected to trusted providers.</p>
+
+    <form class="task-form">
+      <label for="title">Task Title</label>
+      <input type="text" id="title" name="title" placeholder="e.g. Fix leaking kitchen sink" required>
+
+      <label for="category">Select Category</label>
+      <select id="category" name="category" required>
+        <option value="">--Choose a service--</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="electrical">Electrical</option>
+        <option value="carpentry">Carpentry</option>
+        <option value="painting">Painting</option>
+        <option value="generator repair">Generator Repair</option>
+        <option value="house cleaning">House Cleaning</option>
+      </select>
+
+      <label for="description">Task Description</label>
+      <textarea id="description" name="description" rows="5" placeholder="Describe the task in detail" required></textarea>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Ikeja, Lagos" required>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="budget">Estimated Budget (₦)</label>
+      <input type="number" id="budget" name="budget" placeholder="e.g. 5000" min="0" required>
+
+      <button type="submit" class="submit-btn">Submit Task</button>
+    </form>
+
+    <div id="confirmation-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-modal">&times;</span>
+    <h2>Task Submitted!</h2>
+    <p>Your task has been successfully posted.</p>
+    <button onclick="closeModal()" class="ok-btn">OK</button>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html?category=house%20cleaning">House Cleaning</a></li>
+          <li><a href="category.html?category=generator%20repair">Generator Repair</a></li>
+          <li><a href="category.html?category=mechanic">Mechanic</a></li>
+          <li><a href="category.html?category=plumbing">Plumbing</a></li>
+          <li><a href="category.html?category=carpentry">Carpentry</a></li>
+          <li><a href="category.html?category=electrical">Electrical</a></li>
+          <li><a href="category.html?category=painting">Painting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>For Clients</h4>
+        <ul>
+          <li><a href="howitworks.html">How It Works</a></li>
+          <li><a href="safety.html">Safety & Trust</a></li>
+          <li><a href="post-task.html">Post a Task</a></li>
+          <li><a href="contact-support.html">Customer Support</a></li>
+          <li><a href="service-guide.html">Service Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>For Providers</h4>
+        <ul>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="profile-setup.html">Profile Setup</a></li>
+          <li><a href="payment-guide.html">Payment Guide</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="aboutus.html">About To-Do Task</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <img src="logo-white.png" alt="To-Do Task Logo" style="height: 55px;" />
+      <p>&copy; 2025 To-Do Task. Built proudly in 🇳🇬 Nigeria.</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+  const form = document.querySelector('.task-form');
+  const modal = document.getElementById('confirmation-modal');
+  const closeBtn = document.getElementById('close-modal');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent actual form submission
+    modal.style.display = 'block';
+    form.reset(); // Optional: Reset form after submission
+  });
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  closeBtn.onclick = closeModal;
+
+  window.onclick = function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  }
+</script>
+
+</body>
+</html>

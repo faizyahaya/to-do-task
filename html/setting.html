@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | To-Do Task</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/setting.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="settings-container">
+
+  <!-- Sidebar (Left) -->
+  <aside class="settings-sidebar">
+    <ul>
+      <li><a href="#account-settings" class="active">Account Settings</a></li>
+      <li><a href="#security-settings">Security</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#payments">Payment</a></li>
+      <li><a href="#app-preferences">App Preferences</a></li>
+      <li><a href="#task-preferences">Task Preferences</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#danger-zone">Danger Zone</a></li>
+    </ul>
+  </aside>
+
+  <div class="settings-content">
+    <!-- settings.html -->
+    <section class="settings-page">
+      <h1 class="settings-title">Settings</h1>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Account Settings</button>
+        <div id="account-settings" class="accordion-content">
+          <label>Name: <input type="text" placeholder="Your Name" /></label>
+          <label>Username: <input type="text" placeholder="Username" /></label>
+          <label>Phone Number: <input type="tel" placeholder="+234..." /></label>
+          <label>Email: <input type="email" placeholder="Change Email" /></label>
+          <label>Password: <input type="password" placeholder="Change Password" /></label>
+          <label>Language:
+            <select>
+              <option>English</option>
+              <option>Hausa</option>
+              <option>Yoruba</option>
+            </select>
+          </label>
+          <label>Timezone:
+            <select>
+              <option>GMT+1 (West Africa)</option>
+              <option>GMT+0 (UTC)</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Security Settings</button>
+        <div id="security-settings" class="accordion-content">
+          <label><input type="checkbox" /> Two-Factor Authentication</label>
+          <button>View Device Activity</button>
+          <button>View Login History</button>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Notification Settings</button>
+        <div id="notifications" class="accordion-content">
+          <label><input type="checkbox" checked /> Task Alerts (SMS/Email)</label>
+          <label><input type="checkbox" /> Message Notifications</label>
+          <label><input type="checkbox" /> Promotions & Offers</label>
+          <label><input type="checkbox" /> Push Notifications</label>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Privacy Settings</button>
+        <div id="privacy" class="accordion-content">
+          <label>Profile Visibility:
+            <select>
+              <option>Public</option>
+              <option>Clients Only</option>
+              <option>Private</option>
+            </select>
+          </label>
+          <label><input type="checkbox" /> Show Online Status</label>
+          <label><input type="checkbox" /> Show Task Completion History</label>
+          <label><input type="checkbox" /> Allow Direct Messages</label>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Payment Settings</button>
+        <div id="payments" class="accordion-content">
+          <button>Add/Edit Bank Account</button>
+          <button>View Payment History</button>
+          <label>Preferred Method:
+            <select>
+              <option>Bank Transfer</option>
+              <option>Wallet</option>
+            </select>
+          </label>
+          <label><input type="checkbox" /> Enable Auto-Payout</label>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">App Preferences</button>
+        <div id="app-preferences" class="accordion-content">
+          <label>Theme:
+            <select>
+              <option>Light</option>
+              <option>Dark</option>
+              <option>Auto</option>
+            </select>
+          </label>
+          <label>Default Homepage:
+            <select>
+              <option>Dashboard</option>
+              <option>Task Feed</option>
+            </select>
+          </label>
+          <label>Task Sorting:
+            <select>
+              <option>Newest First</option>
+              <option>Closest Distance</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Task Preferences</button>
+        <div id="task-preferences" class="accordion-content">
+          <label>Default Radius:
+            <select>
+              <option>5km</option>
+              <option>10km</option>
+              <option>20km</option>
+            </select>
+          </label>
+          <label><input type="checkbox" /> Auto-Accept Tasks</label>
+          <label><input type="checkbox" /> Allow Negotiation</label>
+          <label>Default Budget Range:
+            <input type="text" placeholder="₦5,000 - ₦20,000" />
+          </label>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <button class="accordion-toggle">Support</button>
+        <div id="support" class="accordion-content">
+          <button>Contact Support</button>
+          <button>Help Center (FAQs)</button>
+          <button>Report a Bug</button>
+        </div>
+      </div>
+
+      <div class="accordion-section danger-zone">
+        <button class="accordion-toggle">Danger Zone</button>
+        <div id="danger-zone" class="accordion-content">
+          <button>Deactivate Account</button>
+          <button>Delete Account</button>
+          <button>Download My Data</button>
+        </div>
+      </div>
+    </section>
+
+ </div>
+
+<script src="javascript/dashboard.js"></script>
+
+<script>
+  document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const open = content.style.display === 'block';
+
+      // Close all first
+      document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+
+      if (!open) content.style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

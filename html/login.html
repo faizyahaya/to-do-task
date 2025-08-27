@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | To-Do Task</title>
+  <link rel="stylesheet" href="css\login.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="login-page">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="logo-brown.png" alt="To-Do Task Logo" />
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-wrapper">
+      <h2>Sign In to Your Account</h2>
+
+      <!-- Social Buttons -->
+      <div class="social-login">
+        <button class="social-btn google"><i class="fab fa-google"></i> Continue with Google</button>
+        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+        <button class="social-btn apple"><i class="fab fa-apple"></i> Continue with Apple</button>
+      </div>
+
+      <div class="divider"><span>or</span></div>
+
+      <!-- Form Fields -->
+      <form>
+  <label for="email">Email or Username</label>
+  <input type="email" id="email" placeholder="Email or Username" required />
+
+  <label for="password">Password</label>
+  <div class="password-wrapper">
+    <input type="password" id="password" placeholder="Password" required />
+    <i class="toggle-password fas fa-eye"></i>
+  </div>
+
+  <button type="submit" class="login-btn">Continue</button>
+</form>
+
+      <p class="signup-link">Don't have an account? <a href="signup.html">Join here</a></p>
+    </div>
+
+    <!-- Terms Notice -->
+    <div class="terms-notice">
+      <p>
+        By joining, you agree to the <a href="#">To-Do Task Terms of Service</a> and to occasionally receive emails from us.
+        Please read our <a href="#">Privacy Policy</a> to learn how we use your personal data.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+document.querySelector('.toggle-password').addEventListener('click', function () {
+const input = document.getElementById('password');
+const isPassword = input.type === 'password';
+input.type = isPassword ? 'text' : 'password';
+this.classList.toggle('fa-eye');
+this.classList.toggle('fa-eye-slash');
+});
+
+</script>
+
+</html>

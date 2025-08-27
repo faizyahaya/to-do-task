@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inbox | To-Do Task</title>
+  <link rel="stylesheet" href="css/inbox.css" />
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="inbox-wrapper">
+    <!-- Sidebar for conversation list -->
+    <aside class="conversation-list">
+      <h2>Inbox</h2>
+      <ul id="conversations">
+        <!-- JS will populate conversation list here -->
+      </ul>
+    </aside>
+
+    <!-- Chat window -->
+    <section class="chat-window">
+      <div class="chat-header">
+        <span id="chat-with">Select a conversation</span>
+        <span id="last-seen"> </span>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages go here -->
+      </div>
+
+      <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type your message..." required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="js/inbox.js"></script>
+</body>
+</html>
